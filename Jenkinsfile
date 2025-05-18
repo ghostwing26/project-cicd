@@ -18,6 +18,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
+                sh 'docker stop webengine'
                 sh 'docker run -d -p 80:80 --name davenginerun davengine:latest'
             }
         }
