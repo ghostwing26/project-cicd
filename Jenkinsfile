@@ -10,6 +10,8 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
+                sh 'docker stop davenginerun'
+                sh 'docker rm davenginerun'
                 sh 'docker rmi davengine:latest'
                 
                 script {
@@ -20,7 +22,6 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker rm davenginerun'
                 sh 'docker run -d -p 80:80 --name davenginerun davengine:latest'
             }
         }
