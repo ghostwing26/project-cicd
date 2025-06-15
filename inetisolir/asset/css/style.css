@@ -12,6 +12,10 @@ h1,h2,h3,h4,h5,h6,p,span,button,a {
     color: #008df2;
 }
 
+.text-light-blue {
+    color: #add1eb;
+}
+
 .text-white {
     color: #ffffff;
 }
@@ -22,6 +26,10 @@ h1,h2,h3,h4,h5,h6,p,span,button,a {
 
 .bg-grey {
     background-color: #1f1f1f;
+}
+
+.bg-light-grey {
+    background-color: #e7e7e7;
 }
 
 .bg-dark-blue {
@@ -39,13 +47,12 @@ ul li.list-group-item {
 a {
     text-decoration: none;
     font-weight: 700;
+}
+
+a.billing {
     color: #0c222c;
 }
 
-a:hover {
+a:hover.billing {
     color: #1277f2;
-}
-
-h2.accordion-header {
-    font-weight: bolder !important;
 }
