@@ -6,9 +6,7 @@ RUN apt install apache2 -y
 RUN apt install apache2-utils -y
 RUN apt clean
 
-COPY index.html /var/www/html
-COPY asset/ /var/www/html
-COPY js/ /var/www/html
+COPY inetisolir/ /var/www/html
 
 EXPOSE 80
 CMD [ "apachectl" , "-D", "FOREGROUND" ]
