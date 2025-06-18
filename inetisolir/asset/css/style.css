@@ -56,8 +56,11 @@ h1,h2,h3,h4,h5,h6,p,span,button,a {
 }
 
 .bg-gradient-blue {
+    /* background: #d8ecf2;
+    background: linear-gradient(90deg, rgba(216, 236, 242, 1) 0%, rgba(96, 140, 163, 1) 52%, rgba(1, 16, 26, 1) 100%); */
+
     background: #d8ecf2;
-    background: linear-gradient(90deg, rgba(216, 236, 242, 1) 0%, rgba(96, 140, 163, 1) 52%, rgba(1, 16, 26, 1) 100%);
+    background: linear-gradient(90deg, rgba(216, 236, 242, 1) 0%, rgba(106, 143, 166, 1) 52%, rgba(10, 46, 69, 1) 100%);
 }
 
 .bg-light-blue {
