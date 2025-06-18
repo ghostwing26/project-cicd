@@ -63,12 +63,8 @@ h1,h2,h3,h4,h5,h6,p,span,button,a {
     background: linear-gradient(90deg, rgba(216, 236, 242, 1) 0%, rgba(106, 143, 166, 1) 52%, rgba(10, 46, 69, 1) 100%);
 }
 
-.bg-light-blue {
-    background-color: #a5d8ff;
-}
-
 .myround {
-    border-radius: 30px;
+    border-radius: 50px;
 }
 
 ul li.list-group-item {
