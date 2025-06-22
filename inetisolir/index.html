@@ -1,111 +1,1008 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="su">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Terisolir</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="shortcut icon" href="asset/img/nex-circle.png" type="image/x-icon">
+    <title>MGMP Bahasa Sunda Depok</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #8B5A2B;
+            --secondary: #6B4423;
+            --accent: #D8A47F;
+            --light: #F8F9FA;
+            --dark: #212529;
+            --background: #F5F3EF;
+            --light-brown: #F0E6D9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .hero {
+             background: linear-gradient(rgba(83, 57, 0, 0.8), rgba(27, 67, 50, 0.9)), 
+                        url("https://desatepus.gunungkidulkab.go.id/assets/files/artikel/sedang_1726591160sedang_1714524930IMG_20240501_075446.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .activity-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .activity-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .img-1 {
+            background-image: url("https://imgx.sonora.id/crop/0x0:1280x927/x/photo/2022/11/22/sunda-pixabay-masbebet-christian-20221122012840.jpg");
+        }
+        
+        .img-2 {
+            background-image: url("https://lh3.googleusercontent.com/proxy/VQaQnv6MRS0HPQV4QHuNpKEwtDfkzWilH0rMJA_SFn_jOZWB5FXr-h2K6jQrC6H82foL_l2fzap3Pg6gAO50HWmPWeZxsOYAd9VP2dvPxdPKfPqKQnNQ0zRE91ObFLGlvJgyJuKLnhDozcqqhaIzfhpYEgtEtijnHKM");
+        }
+        
+        .img-3 {
+            background-image: url("https://nuansa.nusaputra.ac.id/wp-content/uploads/2021/03/image-3.png");
+        }
+        
+        .img-4 {
+            background-image: url("https://scontent.cdninstagram.com/v/t51.75761-15/504333156_17892657114256889_5797395719119407935_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ig_cache_key=MzY1OTc3Mzc0NzU2OTEyMTc1Mg%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIifQ%3D%3D&_nc_ohc=iUnol2-t7voQ7kNvwFAFjxv&_nc_oc=Adk3XkEPCr9pYZiTNaLCPkN9LKet6j30wZ8y3Oifma4Snb4aJ9lELzvRZa33nfCcS2Q&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=TKIMKlO9xJJYF6FXl-OmGQ&oh=00_AfMEcVm0T-1fxqvN5j0Di6d2OpoLsS0a0NWI29lKPxJnEw&oe=685D45F0");
+        }
+        
+        .img-5 {
+            background-image: url("https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/247/2024/10/24/Kampung-Budaya-Sindangbarang-1160767966.jpg");
+        }
+        
+        .img-6 {
+            background-image: url("https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p2/34/2025/02/27/FTBI-2025-Latri-393640386.jpg");
+        }
+        
+        .img-7 {
+            background-image: url("https://acaraseru.blob.core.windows.net/images/image/documentation/registrasi-account/form.jpg");
+        }
+
+        .img-8 {
+            background-image: url("https://awsimages.detik.net.id/community/media/visual/2016/02/25/51f23bbf-3c06-42cd-92c9-9054bf4ece0c_169.jpg?w=600&q=90");
+        }
+        .img-9 {
+            background-image: url("https://awsimages.detik.net.id/community/media/visual/2016/02/25/51f23bbf-3c06-42cd-92c9-9054bf4ece0c_169.jpg?w=600&q=90");
+        }
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .quote-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            opacity: 0.5;
+        }
+        
+        .resource-card {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .resource-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            border-radius: 5px;
+            background-color: var(--primary);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            color: var(--light);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--accent);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+            left: 10%;
+        }
+        
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--secondary);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-img {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid var(--accent);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        .right::after {
+            left: -13px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+        
+        .certificate {
+            position: relative;
+            border: 5px solid var(--primary);
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid var(--accent);
+        }
+        
+        .certificate-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .certificate-seal {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transform: rotate(-15deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+        
+        .vocab-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .vocab-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .vocab-word {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .vocab-meaning {
+            color: var(--dark);
+            font-style: italic;
+        }
+        
+        .vocab-example {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px dashed #e0e0e0;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1s; }
+    </style>
 </head>
 <body>
-   
-
-    <main>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <h2 class="text-center my-5 fw-bold noto-sans">Testing dulu bos</h2>
-
-                    <div class="card shadow">
-                        <div class="card-header bg-gradient-blue">
-                            <h6 class="noto-sans text-dark-grey">1. testing</h6>
+    <!-- Navigation -->
+    <nav id="navbar" class="py-4 bg-transparent absolute top-0 left-0 right-0 z-10">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">MGMP<span class="text-[var(--accent)]">Sunda</span></a>
+            
+            <div class="hidden md:flex space-x-4">
+                <a href="#beranda" class="nav-link">Beranda</a>
+                <a href="#tentang" class="nav-link">Tentang</a>
+                <a href="#kegiatan" class="nav-link">Kegiatan</a>
+                <a href="#Kurikulum" class="nav-link">Kurikulum</a>
+                <a href="#pengumuman" class="nav-link">Pengumuman</a>
+                <a href="#prestasi" class="nav-link">Prestasi</a>
+                <a href="#galeri" class="nav-link">Galeri</a>
+                <a href="#kontak" class="nav-link">Kontak</a>
+            </div>
+            
+            <button class="md:hidden text-white text-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="beranda" class="hero min-h-screen flex items-center">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">Wilujeng Sumping</h1>
+                <p class="text-xl md:text-2xl mb-8 fade-in delay-1">Komunitas ini adalah tempat berproses—tempat kami berkumpul, berdiskusi, dan mengeksplorasi kekayaan budaya Sunda, dari bahasa hingga nilai-nilai leluhur yang hidup dalam keseharian.</p>
+                <div class="flex flex-col md:flex-row justify-center gap-4 fade-in delay-2">
+                    <a href="#kegiatan" class="btn-primary text-center">Lihat Kegiatan</a>
+                    <a href="#tentang" class="btn-outline text-center bg-transparent text-white border-white">Tentang Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="tentang" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[var(--primary)] mb-6">Tentang Paguyuban Guru Basa Sunda</h2>
+                    <p class="text-gray-700 mb-4">Paguyuban Guru Basa Sunda (PGBS) nyaéta hiji organisasi anu ngahijikeun para guru basa Sunda ti sakumna wilayah Jawa Barat. Diadegkeun taun 2010, PGBS boga tujuan pikeun ngajaga, ngamumule, jeung mekarkeun basa Sunda di lingkungan atikan.</p>
+                    <p class="text-gray-700 mb-6">Kami percaya yén basa Sunda mangrupa warisan budaya anu kudu diriksa tur diteruskeun ka generasi ngora. Ku kituna, PGBS aktif ngayakeun rupa-rupa kagiatan pikeun ngarojong kompetensi guru dina ngajarkeun basa Sunda.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-[var(--light-brown)] px-4 py-3 rounded-lg">
+                            <span class="block text-xl font-bold text-[var(--primary)]">500+</span>
+                            <span class="text-sm text-gray-600">Anggota Aktif</span>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-center bg-light-grey2">
-                                Pelanggan login menggunakan nomor whatsapp ke website 
-                                <a href="https://nexbilling.id" target="_blank" rel="noopener noreferrer" class="billing">nexbilling.id</a><br>
-                                <img src="asset/img/1.png" alt="login" class="rounded my-3" width="250" height="250"><br>
-                                Pastikan kode captcha yang di isi sama dengan angka yang muncul.
-                            </li>
-                        </ul>
+                        <div class="bg-[var(--light-brown)] px-4 py-3 rounded-lg">
+                            <span class="block text-xl font-bold text-[var(--primary)]">27</span>
+                            <span class="text-sm text-gray-600">Kabupaten/Kota</span>
+                        </div>
+                        <div class="bg-[var(--light-brown)] px-4 py-3 rounded-lg">
+                            <span class="block text-xl font-bold text-[var(--primary)]">12</span>
+                            <span class="text-sm text-gray-600">Taun Pangalaman</span>
+                        </div>
                     </div>
-
-                    <div class="card shadow my-5">
-                        <div class="card-header bg-gradient-blue">
-                            <h6 class="noto-sans text-dark-grey">2. Cek Tagihan</strong></h6>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-[var(--light-brown)] rounded-lg z-0"></div>
+                        <div class="relative z-10 bg-[var(--primary)] p-6 rounded-lg text-white">
+                            <h3 class="text-xl font-semibold mb-4">Visi & Misi</h3>
+                            <div class="mb-4">
+                                <h4 class="font-medium mb-2">Visi</h4>
+                                <p class="text-[var(--light-brown)]">Ngawujudkeun masarakat anu wanoh, nyaah, jeung bangga kana basa Sunda salaku idéntitas budaya urang Sunda.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-2">Misi</h4>
+                                <ul class="list-disc pl-5 text-[var(--light-brown)] space-y-1">
+                                    <li>Ngaronjatkeun kualitas pangajaran basa Sunda</li>
+                                    <li>Ngawangun jaringan guru basa Sunda</li>
+                                    <li>Nyiptakeun média jeung matéri pangajaran anu inovatif</li>
+                                    <li>Ngayakeun kagiatan-kagiatan pikeun ngamumule basa Sunda</li>
+                                </ul>
+                            </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-center bg-light-grey2">
-                                Setelah berhasil login, akan otomatis muncul daftar tagihan yang belum terbayarkan. Klik <strong class="text-red">Lanjut ke Pembayaran</strong> 
-                                untuk cek rincian tagihan dan memproses pembayaran. <br>
-                                <img src="asset/img/2.png" alt="daftar tagihan" class="rounded my-4" width="220" height="350"><br>
-                                Lalu akan muncul rincian tagihan yang berisi nama paket, periode tagihan, dan harga paket. Apabila ditemukan kekeliruan/kesalahan, 
-                                mohon segera infokan ke tim CS kami sebelum melakukan pembayaran.<br>
-                                <img src="asset/img/3.png" alt="rincian tagihan" class="rounded my-4" width="230" height="480"><br>
-                                Kemudian untuk melanjutkan pembayaran, klik tombol <strong class="text-red">Pilih Cara Bayar.</strong>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card shadow my-5">
-                        <div class="card-header bg-gradient-blue">
-                            <h6 class="noto-sans text-dark-grey">3. Proses Pembayaran</strong></h6>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-center bg-light-grey2">
-                                Setelah klik tombol <strong class="text-red">Pilih Cara Bayar</strong> akan muncul daftar channel pembayaran yang dapat digunakan, mulai dari QRIS,
-                                Virtual Account, Alfamart, Indomaret, Dana, ShopeePay. <br>
-                                <img src="asset/img/4.png" alt="channel pembayaran" class="rounded my-3" width="225" height="450">
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card shadow my-5">
-                        <div class="card-header bg-gradient-blue">
-                            <h6 class="noto-sans text-dark-grey">4. Petunjuk Pembayaran</strong></h6>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-center bg-light-grey2">
-                                Setelah memilih channel pembayaran akan muncul nomor Virtual Account (jika menggunakan virtual account),
-                                dan QRCODE (jika menggunakan QRIS), beserta petunjuk pembayaran.<br><br>
-                                <div class="alert alert-danger" role="alert">
-                                    Mohon tunggu 1-3 menit setelah melakukan pembayaran dan <strong>jangan merubah cara bayar</strong> atau <strong>keluar dari halaman pembayaran</strong>
-                                    sebelum proses pembayaran selesai. <br>
-                                </div>
-                                <img src="asset/img/5.png" alt="bayar via va" class="rounded m-3" width="225" height="450">
-                                <img src="asset/img/6.png" alt="bayar via qris" class="rounded m-3" width="225" height="450">
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card shadow my-5">
-                        <div class="card-header bg-gradient-blue">
-                            <h6 class="noto-sans text-dark-grey">5. Hubungi Kami</strong></h6>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-center bg-light-grey2">
-                                Apabila ada pertanyaan lebih lanjut, silahkan klik tombol dibawah untuk menghubungi Tim CS kami via whatsapp. <br>
-                                <div class="d-grid gap-2 d-md-block">
-                                    <a href="https://wa.me/6281110111833" class="btn btn-outline-light bg-light-grey my-3" tabindex="-1" role="button" aria-disabled="false"><img src="/asset/img/wa-name.png" alt="wa-logo" width="125" height="30"></a>
-                                </div>
-                            </li>
-                        </ul>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-[var(--light-brown)] rounded-lg z-0"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="text-center  text-dark-grey mt-4">
-            <p class="noto-sans">&#169; PT. Nex Solusi Teknologi</p>
-        </div>
-    </main>
+    </section>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-</body>
-</html>
+    <!-- Activities Section -->
+    <section id="kegiatan" class="py-16 bg-[var(--background)]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-left mb-2">Kegiatan Pembelajaran</h2>
+             <p class="text-left mb-12">Rupa-rupa kagiatan anu diayakeun ku PGBS pikeun ngaronjatkeun kualitas pangajaran basa Sunda jeung ngamumule budaya Sunda</p>
+
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Activity 1 -->
+                <div class="card bg-white activity-card">
+                    <div class="activity-img img-1"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Kelas Percakapan Bahasa Sunda</h3>
+                        <p class="text-gray-600 mb-4">Praktik percakapan sehari-hari dalam Bahasa Sunda untuk meningkatkan kemampuan berbicara dan mendengarkan.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span>Setiap Senin & Rabu</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="btn-outline inline-block">Detail Kegiatan</a>
+                    </div>
+                </div>
+                
+                <!-- Activity 2 -->
+                <div class="card bg-white activity-card">
+                    <div class="activity-img img-2"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Lokakarya Menulis Aksara Sunda</h3>
+                        <p class="text-gray-600 mb-4">Belajar menulis dan membaca aksara Sunda tradisional untuk melestarikan warisan budaya tulis.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span>Setiap Jumat</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="btn-outline inline-block">Detail Kegiatan</a>
+                    </div>
+                </div>
+                
+                <!-- Activity 3 -->
+                <div class="card bg-white activity-card">
+                    <div class="activity-img img-3"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Kelas Sastra Sunda</h3>
+                        <p class="text-gray-600 mb-4">Mempelajari karya sastra Sunda klasik dan modern, termasuk pantun, sisindiran, dan cerita rakyat.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span>Setiap Selasa</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="btn-outline inline-block">Detail Kegiatan</a>
+                    </div>
+                </div>
+                
+                <!-- Activity 4 -->
+                <div class="card bg-white activity-card">
+                    <div class="activity-img img-4"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Praktik Tata Bahasa Sunda</h3>
+                        <p class="text-gray-600 mb-4">Mempelajari struktur dan tata bahasa Sunda secara mendalam untuk penguasaan bahasa yang lebih baik.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span>Setiap Kamis</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="#" class="btn-outline inline-block">Detail Kegiatan</a>
+                    </div>
+                </div>
+                
+               
+    </section>
+    
+    <!-- Kurikulem -->
+    <section id= "Kurikulum"class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-center mb-12">Kurikulum MGMP Bahasa Sunda </h2>
+            
+            <div class="timeline">
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-lg mb-2">Landasan</h3>
+                        <p>Kurikulum ini berlandaskan pada filosofi pengembangan potensi siswa agar menjadi manusia Indonesia berkualitas, sesuai dengan tujuan pendidikan nasiona</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-lg mb-2">Fokus</h3>
+                        <p>Kurikulum berfokus pada keterampilan berbahasa dan sastra Sunda, baik lisan maupun tulis</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-lg mb-2">Muatan Lokal</h3>
+                        <p>Kurikulum ini merupakan muatan lokal bahasa dan sastra Sunda yang dikembangkan sesuai dengan kondisi dan kebutuhan daerah setempat</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-lg mb-2">Keterkaitan dengan Kurikulum 2013</h3>
+                        <p>Kurikulum ini juga mengacu pada Kurikulum 2013, termasuk prinsip-prinsip pembelajaran yang berpusat pada siswa</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-lg mb-2">MGMP sebagai Wadahr</h3>
+                        <p>MGMP Bahasa Sunda berperan sebagai forum bagi guru untuk berdiskusi, bertukar pengalaman, dan mengembangkan perangkat pembelajaran</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-lg mb-2">Penyusunan Kurikulum</h3>
+                        <p>Kurikulum disusun dengan memperhatikan karakteristik bahasa Sunda dan kebutuhan siswa di berbagai daerah di Jawa Barat, termasuk daerah dengan dialek bahasa Sunda atau bahasa daerah lain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Papan Pengumuman-->
+
+    <section id="pengumuman" class="py-16 bg-[var(--background)]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-left mb-2">Kagiatan Paguyuban</h2>
+             <p class="text-left mb-12">Rupa-rupa kagiatan anu diayakeun ku PGBS pikeun ngaronjatkeun kualitas pangajaran basa Sunda jeung ngamumule budaya Sunda</p>
+
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Activity 1 -->
+                <div class="card bg-white activity-card">
+                    <div class="activity-img img-6"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Festival Tunas Bahasa Ibu FTBI</h3>
+                        <p class="text-gray-600 mb-4">Juklak Jukni FTBI 2025</p>
+                        <p class="text-gray-600 mb-4">Juklak Juknis FTBI adalah Petunjuk Pelaksanaan (Juklak) dan Petunjuk Teknis (Juknis) untuk Festival Tunas Bahasa Ibu (FTBI). FTBI sendiri adalah kegiatan yang diselenggarakan untuk melestarikan dan mengembangkan bahasa dan sastra daerah, khususnya bahasa dan sastra Sunda di Jawa Barat. Juklak dan Juknis ini memberikan panduan rinci mengenai pelaksanaan FTBI, termasuk tujuan, peserta, jenis lomba, aturan, dan hal-hal teknis lainnya</p>
+                        
+                    </div>
+                    <div class="p-6 pt-0">
+                       <a href="https://drive.google.com/drive/folders/11aXCF5v57vr7vcsXheXtfXXEhg7Yk2jI?usp=sharing&utm_medium=social&utm_source=heylink.me" class="btn-outline inline-block">Detail</a>
+                    </div>
+
+                </div>
+
+                
+                <!-- Activity 2 -->
+                <div class="card bg-white activity-card">
+                    <div class="activity-img img-7"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Pendaftaran FTBI</h3>
+                        <p class="text-gray-600 mb-4">Pendaftaran festival bahasa ibu apreasiasi  dan sastra sunda bagi siswa - siswi smp sekota Depok Tahun 2025</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span>1 Juni - 21 Juli 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://tinyurl.com/FTBI-DEPOK-2025?utm_medium=social&utm_source=heylink.me" class="btn-outline inline-block">Daftar Disini</a>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+            
+         
+
+    
+  
+
+<!-- Font Awesome (untuk ikon sosial media) -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+    
+    <!-- Gallery Section -->
+    <section id="galeri" class="py-16 bg-[var(--background)]">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-center mb-12">Galeri Kegiatan</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-img img-1"></div>
+                <div class="gallery-img img-2"></div>
+                <div class="gallery-img img-3"></div>
+                <div class="gallery-img img-4"></div>
+                <div class="gallery-img img-5"></div>
+                <div class="gallery-img img-6"></div>
+                <div class="gallery-img img-1"></div>
+                <div class="gallery-img img-2"></div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="btn-primary">Lihat Lebih Banyak Foto</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-center mb-12">Download Asset</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card">
+                    <p class="mb-6">Musik Iringan Pupuh Jeung Kawih</p>
+                    <div class="flex left">
+                        <div>
+                         <a href="https://drive.google.com/drive/folders/1Jango7uBlNh41TwNFBCFb86C7aJ6mae1?usp=drive_link&utm_medium=social&utm_source=heylink.me" class="btn-outline inline-block">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="testimonial-card">
+                    <p class="mb-6">Musik Iringan Pupuh Jeung Kawih</p>
+                    <div class="flex left">
+                        <div>
+                         <a href="https://drive.google.com/drive/folders/1Jango7uBlNh41TwNFBCFb86C7aJ6mae1?usp=drive_link&utm_medium=social&utm_source=heylink.me" class="btn-outline inline-block">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+                
+    </section>
+    
+    <!-- Resources Section -->
+    <section class="py-16 bg-[var(--background)]">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-center mb-12">Sumber Belajar</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Buku & Materi</h3>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Kamus Basa Sunda</h4>
+                            <p class="text-sm text-gray-600">Kamus lengkap Bahasa Sunda dengan lebih dari 10.000 kata.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Tata Bahasa Sunda Modern</h4>
+                            <p class="text-sm text-gray-600">Panduan lengkap tata bahasa Sunda untuk pemula hingga mahir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Kumpulan Carpon Sunda</h4>
+                            <p class="text-sm text-gray-600">Koleksi cerita pendek Bahasa Sunda untuk latihan membaca.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Media Digital</h3>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Video Pembelajaran Bahasa Sunda</h4>
+                            <p class="text-sm text-gray-600">Seri video pembelajaran untuk berbagai tingkat kemahiran.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Aplikasi Belajar Bahasa Sunda</h4>
+                            <p class="text-sm text-gray-600">Aplikasi interaktif untuk belajar Bahasa Sunda kapan saja.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Podcast Basa Sunda</h4>
+                            <p class="text-sm text-gray-600">Podcast dalam Bahasa Sunda untuk melatih kemampuan mendengarkan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <!-- Contact Section -->
+    <section class="py-16 bg-white" id="kontak">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-green-800 mb-4">Kontak Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Upami aya patarosan atanapi hoyong terang langkung seueur ngeunaan Paguyuban Guru Basa Sunda, mangga kontak kami</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-green-50 p-6 rounded-lg h-full">
+                        <h3 class="text-xl font-semibold mb-6 text-green-800">Informasi Kontak</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3 shrink-0">
+                                    <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-green-800">Alamat</h4>
+                                    <p class="text-gray-600">Jl. Soekarno-Hatta No. 123, Bandung, Jawa Barat 40123</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3 shrink-0">
+                                    <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-green-800">Email</h4>
+                                    <p class="text-gray-600">info@pgbs.or.id</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3 shrink-0">
+                                    <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-green-800">Telepon</h4>
+                                    <p class="text-gray-600">+62 22 1234567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3 shrink-0">
+                                    <svg class="w-5 h-5 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-green-800">Jam Operasional</h4>
+                                    <p class="text-gray-600">Senin - Jumat: 08.00 - 16.00 WIB</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-green-800 mb-3">Media Sosial</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center hover:bg-green-200 transition">
+                                    <svg class="w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/sundadepok/" class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center hover:bg-green-200 transition">
+                                    <svg class="w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center hover:bg-green-200 transition">
+                                    <svg class="w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center hover:bg-green-200 transition">
+                                    <svg class="w-5 h-5 text-green-700" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-6 text-green-800">Kirim Pesan</h3>
+                        
+                        <div class="mb-4">
+                            <label for="nama-kontak" class="block text-sm font-medium text-gray-700 mb-1">Nami</label>
+                            <input type="text" id="nama-kontak" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email-kontak" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email-kontak" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subjek" class="block text-sm font-medium text-gray-700 mb-1">Subjek</label>
+                            <input type="text" id="subjek" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="pesan" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+                            <textarea id="pesan" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-green-700 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Footer -->
+    <footer class="bg-green-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <p class="text-green-200 mb-4">Paguyuban Guru Basa Sunda (PGBS) nyaéta organisasi anu ngahijikeun para guru basa Sunda di Jawa Barat.</p>
+                    <p class="text-green-200">© 2025 Paguyuban Guru Basa Sunda. Sadaya hak dilindingi.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  
